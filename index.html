@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Redirecting...</title>
+  <script>
+    const isMobile = /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+    const destination = isMobile
+      ? "https://accusalt-mobile.netlify.app"
+      : "https://accusalt-desktop.netlify.app";
+    window.location.replace(destination);
+  </script>
+</head>
+<body>
+  <p>Redirecting to the appropriate version of the app...</p>
+  <p>If you're not redirected, <a id="fallback-link" href="#">click here</a>.</p>
+  <script>
+    document.getElementById('fallback-link').href = destination;
+  </script>
+</body>
+</html>
